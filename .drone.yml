@@ -1,0 +1,10 @@
+pipeline:
+
+  build_stage:
+    image: plugin/docker
+    registry: docker.io/iggalleguillo
+    repo: docker.io/iggalleguillo/testdockerswarm
+    dockerfile: Dockerfile
+    tags: latest
+    secrets: [ docker_username, docker_password ] 
+    
