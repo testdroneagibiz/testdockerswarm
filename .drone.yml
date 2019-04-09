@@ -5,6 +5,6 @@ pipeline:
     registry: docker.io/iggalleguillo
     repo: docker.io/iggalleguillo/testdockerswarm
     dockerfile: Dockerfile
-    tags: latest
+    tags: latest 
     secrets: [ docker_username, docker_password ] 
     
