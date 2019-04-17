@@ -1,11 +1,9 @@
 pipeline:
 
   build_stage:
-    image: plugin/docker
+    image: plugins/docker
     repo: iggalleguillo/testdroneagibiz
-    file: Dockerfile
-    tags: latest
-    username: iggalleguillo
-    password: asking2010
-    
+    dockerfile: Dockerfile
+    tags: latest 
+    secrets: [ docker_username, docker_password ] 
     
