@@ -2,7 +2,7 @@ pipeline:
 
   build_stage:
     image: plugin/docker
-    registry: docker.io
+    registry: hub.docker.com
     repo: iggalleguillo/testdroneagibiz
     dockerfile: Dockerfile
     tags: latest 
