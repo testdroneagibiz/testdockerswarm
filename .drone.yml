@@ -3,7 +3,7 @@ pipeline:
   build_stage:
     image: plugin/docker
     registry: docker.io
-    repo: iggalleguillo/testdockerswarm
+    repo: iggalleguillo/testdroneagibiz
     dockerfile: Dockerfile
     tags: latest 
     secrets: [ docker_username, docker_password ] 
