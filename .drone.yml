@@ -10,6 +10,6 @@ pipeline:
     
   deploy_stage:
     image: codestation/drone-stack
-    host: tcp://192.168.99.100:2376 
+    host: tcp://192.168.99.104:2376 
     stack_name: testdockerswarm
     
