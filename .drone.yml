@@ -3,13 +3,15 @@ pipeline:
   build_stage:
     image: plugins/docker
     repo: iggalleguillo/testdroneagibiz
-    dockerfile: Dockerfile
-    tags: latest 
-    secrets: [ docker_username, docker_password ] 
-    
+    dockerfile: Dockerfile 
+    secrets: [ docker_username, docker_password ]
+    tags:
+      - v-${DRONE_BUILD_NUMBER}
     
   deploy_stage:
     image: codestation/drone-stack
     host: tcp://192.168.99.104:2376 
-    stack_name: testdockerswarm
-    
+    stack: testdockerswarm
+    filename: stack.yml
+    meta_data:
+      REPLICAS: 1
