@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   api:
-    image: iggalleguillo/testdroneagibiz:47
+    image: https://cloud.docker.com/u/iggalleguillo/repository/docker/iggalleguillo/testdroneagibiz:48
     deploy:
       replicas: 1
       resources:

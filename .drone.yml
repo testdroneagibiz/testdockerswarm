@@ -13,7 +13,6 @@ pipeline:
     host: tcp://192.168.99.104:2376 
     stack_name: testdockerswarm
     compose: stack.yml
-    registry: https://cloud.docker.com
     secrets: [ docker_username, docker_password ]
     meta_data:
       REPLICAS: 1
