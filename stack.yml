@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   api:
-    image: testdroneagibiz
+    image: testdroneagibiz:1
     deploy:
       replicas: 1
       resources:
