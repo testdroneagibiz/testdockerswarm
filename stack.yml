@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   api:
-    image: testdroneagibiz:v-52
+    image: iggalleguillo/testdroneagibiz:latest
     deploy:
       replicas: 1
       resources:
