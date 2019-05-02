@@ -10,7 +10,11 @@ pipeline:
     
   code-analysis_stage:
     image: aosapps/drone-sonar-plugin
-    secrets: [ sonar_host, sonar_token ]
+    settings:
+       sonar_host:
+         from_secret: sonar_host
+       sonar_token:
+         from_secret: sonar_token
     ver: v-${DRONE_BUILD_NUMBER}
     sources: .
     level: DEBUG
