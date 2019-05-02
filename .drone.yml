@@ -8,6 +8,16 @@ pipeline:
     tags:
       - v-${DRONE_BUILD_NUMBER}
     
+  code-analysis_stage:
+    image: aosapps/drone-sonar-plugin
+    secrets: [ sonar_host, sonar_token ]
+    ver: v-${DRONE_BUILD_NUMBER}
+    timeout: 20
+    sources: .
+    level: DEBUG
+    showProfiling: true
+
+
   deploy_stage:
     image: codestation/drone-stack
     host: tcp://192.168.99.104:2376 
