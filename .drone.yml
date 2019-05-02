@@ -11,7 +11,7 @@ pipeline:
     image: aosapps/drone-sonar-plugin
     secrets: [ plugin_sonar_host, plugin_sonar_token]
     ver: v-${DRONE_BUILD_NUMBER}
-    sources: *.csproj
+    sources: .csproj 
 
   deploy_stage:
     image: codestation/drone-stack
