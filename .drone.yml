@@ -9,13 +9,10 @@ pipeline:
       - v-${DRONE_BUILD_NUMBER}
     
   code-analysis_stage:
-    image: aosapps/drone-sonar-plugin
+    image: rucciva/drone-sonar-plugin
+    pull: true
     secrets: [ sonar_host, sonar_token ]
-    docker_secrets: [ sonar_host, sonar_token ]
-    ver: v-${DRONE_BUILD_NUMBER}
-    sources: .
-    level: DEBUG
-    showProfiling: true
+    
 
   deploy_stage:
     image: codestation/drone-stack
