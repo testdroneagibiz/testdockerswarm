@@ -9,9 +9,9 @@ pipeline:
       - v-${DRONE_BUILD_NUMBER}
     
   code-analysis_stage:
-    image: rucciva/drone-sonar-plugin
-    pull: true
-    secrets: [ sonar_host, sonar_token ]
+    image: aosapps/drone-sonar-plugin
+    secrets: [ plugin_sonar_host, plugin_sonar_token]
+    ver: v-${DRONE_BUILD_NUMBER}
     
 
   deploy_stage:
