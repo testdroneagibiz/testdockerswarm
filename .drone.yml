@@ -10,9 +10,10 @@ pipeline:
     
   code-analysis_stage:
     image: aosapps/drone-sonar-plugin
-    secrets: [ sonar_host, sonar_token ]
+    settings:
+        sonar_host: http://192.168.99.104:9000
+        sonar_token: d0a2887d83694454d079987120cb951eebae5844
     ver: v-${DRONE_BUILD_NUMBER}
-    timeout: 20
     sources: .
     level: DEBUG
     showProfiling: true
