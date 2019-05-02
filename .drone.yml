@@ -11,8 +11,8 @@ pipeline:
   code-analysis_stage:
     image: aosapps/drone-sonar-plugin
     settings:
-        sonar_host: tcp://192.168.99.104:9000
-        sonar_token: d0a2887d83694454d079987120cb951eebae5844
+        sonar_host: http://192.168.99.100:4300
+        sonar_token: 083310af56a37ac38e589e8454ca3f7f15062fe0
     ver: v-${DRONE_BUILD_NUMBER}
     sources: .
     level: DEBUG
