@@ -8,7 +8,7 @@ pipeline:
       - v-${DRONE_BUILD_NUMBER}
     
   code-analysis_stage:
-    image: iggalleguillo/sonar-plugin
+    image: aosapps/drone-sonar-plugin
     secrets: [ plugin_sonar_host, plugin_sonar_token]
     ver: v-${DRONE_BUILD_NUMBER}
     sources: .
