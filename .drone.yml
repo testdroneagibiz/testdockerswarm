@@ -8,12 +8,13 @@ pipeline:
       - v-${DRONE_BUILD_NUMBER}
     
   code-analysis_stage:
+    pull: true
     image: iggalleguillo/sonar-plugin
     secrets: [ plugin_sonar_host, plugin_sonar_token]
     docker_secrets: [ docker_username, docker_password ]
     ver: v-${DRONE_BUILD_NUMBER}
     sources: .
-
+    
   deploy_stage:
     image: codestation/drone-stack
     host: tcp://192.168.99.104:2376 
