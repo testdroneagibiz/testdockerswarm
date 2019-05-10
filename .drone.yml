@@ -13,7 +13,7 @@ pipeline:
     secrets: [ plugin_sonar_host, plugin_sonar_token]
     docker_secrets: [ docker_username, docker_password ]
     ver: v-${DRONE_BUILD_NUMBER}
-    sources: .
+    sources: . 
     
   deploy_stage:
     image: codestation/drone-stack
