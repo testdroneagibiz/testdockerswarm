@@ -1,7 +1,7 @@
 version: '3.2'
 
 services:
-  api:
+  app:
     image: iggalleguillo/testdroneagibiz:latest
     deploy:
       replicas: 1
@@ -19,5 +19,11 @@ services:
         delay: 5s
         max_attempts: 5
         window: 30s
+    networks:
+      - apps-v1
     ports:
       - "80:80"
+
+networks:
+  apps-v1:
+    external: true
